@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <h1>Using Date Formats</h1>
+    <h3>Get methods:</h3>
+    
+    <p id="ex1"></p>
+    <p id="ex2"></p>
+    <p id="ex3"></p>
+    <p id="ex4"></p>
+    <p id="ex5"></p>
+    <button onclick="document.getElementById('time').innerHTML=Date()">Time??</button>
+    <p id="time"></p>
+    
+    <script>
+               //get month
+        const months = ["January","February","March","April",
+        "May","June","July","August","September","October","November","December"];
+        const mon = new Date("2000-12-02");
+        let month = months[mon.getMonth()];
+        document.getElementById("ex1").innerHTML = "EX1: "+month+"(month)";
+    </script>
+    <script>
+              //get date
+        const date =new Date("2000-12-02");
+        document.getElementById("ex2").innerHTML ="EX2: "+date.getDate()+"(date)";
+    </script>
+    <script>
+             //get hours
+        const hrs = new Date("2000-12-02");
+        document.getElementById("ex3").innerHTML = "EX3: "+hrs.getHours()+"(hours)";
+    </script>
+    <script>
+            //get minutes
+        const min=new Date("2000-12-02");
+        document.getElementById("ex4").innerHTML="EX4: "+min.getMinutes()+"(minutes)";
+    </script>
+    <script>
+        const sec= new Date();
+        document.getElementById("ex5").innerHTML ="EX5: "+ sec.getSeconds()+"(seconds)";
+        </script>
+     <h3>Set Methods:</h3>
+     <p id="ex6"></p>
+     <p id="ex7"></p>
+     <p id="ex8"></p>
+     <p id="ex9"></p>
+     <p id="ex10"></p>     
+     <script>
+            //set year
+        const year = new Date();
+        year.setFullYear(2000, 11, 2);
+        document.getElementById("ex6").innerHTML ="EX6: "+ year;
+        </script> 
+    <script>
+            //set hour
+        const hour= new Date(2000,11, 2);
+        hour.setHours(18);
+        document.getElementById("ex7").innerHTML="EX7: "+hour;
+    </script>
+    <script>
+            //set milliseconds
+        const milli=new Date(2024,11,11);
+        milli.setMilliseconds(840);
+        document.getElementById("ex8").innerHTML="EX8: "+milli;
+    </script>
+    <script>
+           //set time
+           const time=new Date();
+           time.setTime(7683172683571);
+           document.getElementById("ex9").innerHTML="EX9: "+time;
+    </script> 
+    <script>
+          //set date
+          const date1=new Date();
+          date1.setDate(24);
+          document.getElementById("ex10").innerHTML="EX10: "+date1;
+    </script>  
+    </body>
+</html>

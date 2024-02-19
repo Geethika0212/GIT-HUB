@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body{
+            color:rgb(26, 15, 180);
+        }
+    </style>
+<h3>Nullish and Ternary Comparisons</h3>
+
+<input id="balance" value="500" />
+<button onclick="ternary()">click</button>
+<p id="ex1"></p>
+<p id="ex2"></p>
+<p id="ex3"></p>
+<script>
+function ternary() 
+{
+  let balance = document.getElementById("balance").value;
+  let check = (balance < 300) ? "Cannot access":"Can access";
+  document.getElementById("ex1").innerHTML = check; 
+}
+</script>
+
+<script>
+    let name = "Geethika";
+    let text = "null";
+    let result = name ?? text;
+    document.getElementById("ex2").innerHTML = "Ex2: The name is " + result; 
+</script>
+<script>
+    let word = null;
+    let word1 = "HTML";
+    let final = word ?? word1;
+    document.getElementById("ex3").innerHTML="Ex3: The word is "+final;
+</script>
+    </body>
+</html>

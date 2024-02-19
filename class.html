@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="demo"></p>
+        
+        <script>
+        class cars
+        {
+            constructor(model,year)
+            {
+                this.model=model;
+                this.year=year;
+            }
+        }
+        const car1=new cars("hyundai",2009);
+        const car2=new cars("toyota",2008);
+        document.getElementById("demo").innerHTML=car1.model+" "+car2.year+"(classes)";
+        </script>
+        
+        <input id="age" value="18" />
+        <button onclick="abc()">Result</button>
+        <p id="ex1"></p>
+        <script>
+            
+            function abc()
+            {
+                document.getElementById("age").innerHTML=age.value;
+                let check=" ";
+                if(age>18)
+                {
+                    document.getElementById("ex1").innerHTML="eligible"+check;
+
+                }
+                else{
+                    document.getElementById("ex1").innerHTML="not eligible" +check;
+                }
+            }
+            
+            
+        </script>
+    </body>
+</html>

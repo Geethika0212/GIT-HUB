@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Personal Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            
+        }
+
+        label1 {
+            margin-left: auto;
+            margin-bottom: 8px;
+        }
+
+        label2 {
+            margin-bottom: 8px;
+            margin-left: 50px;
+        }
+
+        label3 {
+            margin-top: 40px;
+            margin-left: 50px;
+        }
+
+        label4 {
+            margin-bottom: 15px;
+            margin-left: 55px;
+        }
+
+        label5 {
+            margin-bottom: 8px;
+            margin-left: 74px;
+        }
+
+        label6 {
+            margin-bottom: 8px;
+            margin-left: 86px;
+        }
+
+        input,select {
+            width: 20%;
+            padding: 6px;
+            margin-bottom: 100px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #2a792c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+            position: relative;
+            left: 800px;
+        }
+
+        .box {
+            border: 1.5px solid rgb(29, 5, 54);
+            height: 175px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Personal Details:</h2>
+    <label1 for="fullname"> Enter Fullname:</label1>
+        <input type="text" 
+        id="fullname" 
+        onchange="myFunction(event)"  />
+    <label2 for="email">Email:</label2>
+        <input type="email" 
+        id="email" 
+        onblur="clickfunction(1,2,event)"  />
+    <label3 for="occupation">Occupation:</label3>
+        <input type="text"  
+        id="occupation"  
+        onblur="clickfunction(event)"  />
+    <label4 for="age">Age:</label4>
+        <input type="text"  
+        id="age"  
+        onblur="clickfunction(event)"  />
+    <label5 for="city">City:</label5>
+        <input type="text"  
+        id="city"  
+        onblur="clickfunction(event)"  />
+    <label6 for="gender">Gender:</label6>
+        <select id="gender" onchange="clickfunction(event)">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+    </select>
+    <button onmouseout="submitform()">Submit</button>
+    
+    <div class="box">
+        <p id="Ex"></p>
+        <script>
+            function myFunction(event) {
+                console.log(event);
+                let fullname = document.getElementById("fullname").value;
+            }
+        </script>
+        <script>
+            function clickfunction(event) {
+                console.log(event);
+                let email = document.getElementById('email').value;
+            }
+        </script>
+        <script>
+            function clickfunction(event) {
+                console.log(event);
+                let occupation = document.getElementById("occupation").value;
+            }
+        </script>
+        <script>
+            function clickfunction(event) {
+                console.log(event);
+                let age = document.getElementById("age").value;
+            }
+        </script>
+        <script>
+            function clickfunction(event) {
+                console.log(event);
+                let city = document.getElementById("city").value;
+            }
+        </script>
+        <script>
+            function clickfunction(event) {
+                console.log(event);
+                let gender = document.getElementById("gender").value;
+            }
+        </script>
+        <script>
+            function submitform(event) {
+                console.log(event);
+                let fullname = document.getElementById("fullname").value;
+                let email = document.getElementById('email').value;
+                let occupation = document.getElementById("occupation").value;
+                let age = document.getElementById("age").value;
+                let city = document.getElementById("city").value;
+                let gender = document.getElementById("gender").value;
+                document.getElementById("Ex").innerHTML = ('Full Name:  ' +fullname
+                    + '<br>Email:  ' +email + '<br>Occupation:  ' +occupation
+                    + '<br>Age:  ' +age + '<br>Gender:  ' +gender + '<br>City:  ' +city);
+            }
+        </script>
+    </div>
+</body>
+
+</html>

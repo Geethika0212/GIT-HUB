@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    color:rgb(2, 2, 2);
+    font-family:'Times New Roman', Times, serif;
+  }
+ 
+  body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color:rgb(245, 244, 243);
+  }
+ 
+  header {
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(100, 75, 43, 0.342);
+    }
+ 
+  .row {  
+    display:flex;
+    flex-wrap:wrap;
+  }
+ 
+  .side {
+    background-color: rgba(100, 75, 43, 0.342);
+    
+    padding: 30px;
+    position: relative;
+    top: 20px;
+  
+
+  }
+  .side :hover {
+    color:rgb(6, 80, 9)
+  }
+  a{
+    text-decoration:solid;
+  }
+ 
+  
+  

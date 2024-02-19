@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<h2>String Methods</h2>
+
+    
+</head>
+
+<h3> String length</h3>
+    <div>
+        <button onclick="length(event)">Artha Solutions Hyd</button>
+        <p id="Ex1"></p>
+        <script>
+          let string1= "Artha Solutions Hyd";
+           function length(event) 
+           {
+             document.getElementById("Ex1").innerHTML=  string1.length;
+           }
+        </script>
+    </div>
+  <h3>String slice</h3>
+  <div>
+        <button onclick="textslice(event)">Geethika Reddy</button>
+        <p id="Ex2"></p>
+        <script>
+           let text= "Geethika Reddy";
+           function textslice(event) 
+           {
+             document.getElementById("Ex2").innerHTML= text.slice(0,5);
+           }
+        </script>
+    </div>
+
+    <h3>String substring</h3>
+    <div>
+ 
+        <button onclick="substring(event)">Artha Solutions Hyd</button>
+        <p id="Ex3"></p>
+        <script>
+             let substr = "Artha Solutions Hyd";
+            function substring(event)
+            {
+              document.getElementById("Ex3").innerHTML= substr.substring(0,5);
+            }
+        </script>
+    </div>
+
+    <h3>String replace</h3>
+    <div>
+        
+        <p id="Ex4">Using Replace:How are you</p>
+        <button onclick="replace()">Click</button>
+        <script>
+            function replace() 
+             {
+                let text = document.getElementById("Ex4").innerHTML; 
+                document.getElementById("Ex4").innerHTML =
+                text.replace(/How are you/,"Iam fine");
+}
+        </script>
+    </div>
+
+    <h3>String replaceAll</h3>
+    <div>
+        <button onclick="replaceall(event)">Sun rises in the West and sets in the west</button>
+        <p id="Ex5"></p>
+        <script>
+             let sentence="Sun rises in the West and sets in the west";
+             sentence=sentence.replaceAll("West","East");
+            function replaceall(event) 
+            {
+                document.getElementById("Ex5").innerHTML
+                    = sentence;
+            }  
+        </script>
+    </div>
+
+    <h3>String toUpperCase</h3>
+    <div>
+        <p id="Ex6">Uppercase:Geethika Reddy</p>
+        <button onclick="upper()">Click</button>
+        <script>
+            function upper(event)
+              {
+                let word = document.getElementById("Ex6").innerHTML;
+                document.getElementById("Ex6").innerHTML = word.toUpperCase();
+              }
+        </script>
+    </div>
+
+    <h3>String toLowerCase</h3>
+    <div>
+        <p id="Ex7">Lowercase:GEETHIKA REDDY</p>
+        <button onclick="lower()">Click</button>
+        <script>
+            function lower(event)
+              {
+                let word = document.getElementById("Ex7").innerHTML;
+                document.getElementById("Ex7").innerHTML = word.toLowerCase();
+              }
+      </script>
+    </div>
+
+    <h3>String concat</h3>
+    <div>
+        <button onclick="concat(event)">"Artha" "Solutions"</button>
+        <p id="Ex8"></p>
+        <script>
+             let word1 = "Artha";
+             let word2 = "Solutions";
+            function concat(event)
+            {
+                let word3 = word1.concat(" " + word2);
+               document.getElementById("Ex8").innerHTML
+                 = word3;
+               
+            }
+       </script>
+    </div>
+
+    <h3>String trim</h3>
+    <div>
+        <button onclick="trim(event)">"     Artha       Solutions    "</button>
+        <p id="Ex9"></p>
+        <script>
+             let sent1 = "     Artha       Solutions    ";
+            function trim(event)
+            {
+                let sent2 = sent1.trim();
+                document.getElementById("Ex9").innerHTML
+                    = sent1.length+"(before)" + "<br>"+sent2.length+"(after)";
+            }
+        </script>
+    </div>
+
+    <h3>String trimStart</h3>
+    <div>
+        <button onclick="trimstart(event)">"            Artha       Solutions    "</button>
+        <p id="Ex10"></p>
+        <script>
+             let sent3 = "            Artha       Solutions    ";
+             let sent4 = sent3.trimStart();
+            function trimstart(event)
+            {
+               document.getElementById("Ex10").innerHTML
+                 = "Before trimstart: " +sent3.length+"<br>After trimstart: "+sent4.length;;
+            }
+        </script>
+    </div>
+
+    <h3>String trimEnd</h3>
+    <div>
+        <button onclick="trimend(event)">"            Artha       Solutions    "</button>
+        <p id="Ex11"></p>
+        <script>
+            let sent5 = "            Artha       Solutions    ";
+             let sent6 = sent5.trimEnd();
+            function trimend(event) 
+            {
+                document.getElementById("Ex11").innerHTML
+                = "Before trimend: " +sent5.length+"<br>After trimend: "+sent6.length;;
+            }
+        </script>
+    </div>
+
+    <h3>String padStart</h3>
+    <div>
+        <button onclick="padstart(event)">G</button>
+        <p id="Ex12"></p>
+        <script>
+             let alpha="G";
+             alpha=alpha.padStart(6,"R");
+            function padstart(event) 
+            {
+                document.getElementById("Ex12").innerHTML
+                = alpha;
+            }
+        </script>
+    </div>
+
+    <h3>String padEnd</h3>
+    <div>
+        <button onclick="padend(event)">R</button>
+        <p id="Ex13"></p>
+        <script>
+            let alpha1="R";
+    alpha1=alpha1.padEnd(6,"G");
+            function padend(event) 
+            {
+                document.getElementById("Ex13").innerHTML
+                    =  alpha1;
+            }
+ 
+        </script>
+    </div>
+
+    <h3>String charAt</h3>
+    <div>
+        <button onclick="charat(event)">"Artha Solutions"</button>
+        <p id="Ex14"></p>
+        <script>
+            let alpha2="Artha Solutions";
+            function charat(event) 
+            {
+              document.getElementById("Ex14").innerHTML
+                = alpha2.charAt(6);
+            }
+        </script>
+    </div>
+
+    <h3>String charCodeAt</h3>
+    <div>
+        <button onclick="charcodeat(event)">"Geethika Reddy"</button>
+        <p id="Ex15"></p>
+        <script>
+            let alpha3="Geethika Reddy";
+            
+            function charcodeat(event) {
+                
+                document.getElementById("Ex15").innerHTML
+                    = alpha3.charCodeAt(12);
+            }
+       </script>
+    </div>
+
+    <h3>String slice</h3>
+    <div>
+        <button onclick="split(event)">Apple,Banana,Carrot,Grapes,Papaya</button>
+        <p id="Ex16"></p>
+        <script>
+            let alpha4="Apple,Banana,Carrot,Grapes,Papaya";
+            const split1 = alpha4.split(",");
+            function split(event) 
+            {
+                
+                document.getElementById("Ex16").innerHTML
+                    =  split1[3];
+            }
+ 
+        </script>
+    </div>
+ 
+</body>
+ 
+</html

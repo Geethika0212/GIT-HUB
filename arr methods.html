@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Array Methods</h2>
+<h3>Examples for all Array Methods</h3>
+<p id="Ex1"></p>
+<p id="Ex2"></p>
+<p id="Ex3"></p>
+<p id="Ex4"></p>
+<p id="Ex5"></p>
+<p id="Ex6"></p>
+<p id="Ex7"></p>
+<p id="Ex8"></p>
+<p id="Ex9"></p>
+<p id="Ex10"></p>
+<p id="Ex11"></p>
+<p id="Ex12"></p>
+<p id="Ex13"></p>
+<p id="Ex14"></p>
+<p id="Ex15"></p>
+<p id="Ex16"></p>
+<script>
+    let lett= ["g","e","e","t","0","1","2","3"];
+    document.getElementById("Ex1").innerHTML
+        ="Array Length: "+lett.length;
+</script>
+<script>
+    let words=["abc ","def ","ghi "," jkl"];
+    document.getElementById("Ex2").innerHTML
+       ="Array toString: "+words.toString();
+</script>
+<script>
+    let word1=["abc","def","ghi","jkl","mno","pqr","stu"];
+    document.getElementById("Ex3").innerHTML
+       ="Using join : "+word1.join(" & ");
+</script>
+<script>
+    let lang=["English ","Telugu ","Hindi ","Kannada ","Tamil"];
+    document.getElementById("Ex4").innerHTML
+       = "Before pop: "+lang;
+        lang.pop();
+        lang.pop();  
+    document.getElementById("Ex5").innerHTML
+       = " pop: "+lang.pop();
+</script>
+<script>
+    let city=["Hyd","Mum","Delhi","Che"];
+    document.getElementById("Ex6").innerHTML
+       = "Before push; "+city;
+       city.push("INDIA");
+       city[3]=" BHUTAN";
+    document.getElementById("Ex7").innerHTML
+       = "After push: "+city;
+</script>
+<script>
+    let ani = ["Dog", "Cat", "Lion", "Bear"];
+document.getElementById("Ex8").innerHTML
+      = "Before Shift: "+ani;
+ani.shift();
+document.getElementById("Ex9").innerHTML 
+    = "After Shift: " +ani;
+</script>
+<script>
+    let word = ["Geethika ","Reddy "];
+document.getElementById("Ex10").innerHTML
+      = "Before unshift: "+word;
+word.unshift("Artha");
+word[3]="hyd";
+word[4]=" Solutions";
+document.getElementById("Ex11").innerHTML 
+    = "After unshift: " +word;
+</script>
+<script>
+    let cou=["USA ","IND ","AUS"];
+    document.getElementById("Ex12").innerHTML
+      = "Before delete: "+cou;
+      delete cou[0];
+    document.getElementById("Ex13").innerHTML
+      = "After delete: "+cou;
+</script>
+<script>
+    let words1=["HTML ","CSS "];
+    let words2=["JAVA ","JS"];
+    total=words1.concat(words2);
+    document.getElementById("Ex14").innerHTML
+      ="Using concat: "+total;
+</script>
+<script>
+    let arr=[[15,2],[3,46],[55,67]];
+    let result=arr.flat();
+    document.getElementById("Ex15").innerHTML
+     ="Using flat: "+result;
+</script>
+<script>
+    let array=["gold","diamond","silver"];
+    let sol=array.slice(2);
+    document.getElementById("Ex16").innerHTML
+      ="Using slice: "+sol;
+</script>

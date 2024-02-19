@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<h2>Array Methods</h2>
+
+    
+</head>
+
+<h3>Array length</h3>
+    <div>
+        <button onclick="length(event)">g,e,e,t,0,1,2,3</button>
+        <p id="Ex1"></p>
+        <script>
+           let lett= ["g","e","e","t","0","1","2","3"];
+           function length(event) 
+           {
+             document.getElementById("Ex1").innerHTML=  lett.length;
+           }
+        </script>
+    </div>
+
+<h3>Array toString</h3>
+ 
+    <div>
+        <button onclick="tostring(event)">"abc ","def ","ghi "," jkl"</button>
+        <p id="Ex2"></p>
+        <script>
+           let words=["abc ","def ","ghi "," jkl"];
+           function tostring(event) 
+           {
+             document.getElementById("Ex2").innerHTML= words.toString();
+           }
+        </script>
+    </div>
+
+    <h3>Array Join</h3>
+    <div>
+ 
+        <button onclick="join(event)">abc,def,ghi,jkl,mno,pqr,stu</button>
+        <p id="Ex3"></p>
+        <script>
+            let word1=["abc","def","ghi","jkl","mno","pqr","stu"];
+            function join(event)
+            {
+              document.getElementById("Ex3").innerHTML= word1.join(" & ");
+            }
+        </script>
+    </div>
+
+    <h3>Before Pop</h3>
+    <div>
+        <button onclick="beforepop(event)">English ,Telugu ,Hindi ,Kannada ,Tamil</button>
+        <p id="Ex4"></p>
+        <script>
+            let lang=["English ","Telugu ","Hindi ","Kannada ","Tamil"];
+            function beforepop(event) 
+            {
+               document.getElementById("Ex4").innerHTML
+                =  lang;
+ 
+            }
+        </script>
+    </div>
+
+    <h3>After Pop</h3>
+    <div>
+        <button onclick="pop(event)">Pop</button>
+        <p id="Ex5"></p>
+        <script>
+            function pop(event) 
+            {
+                lang.pop();
+                lang.pop();
+                document.getElementById("Ex5").innerHTML
+                    =  lang.pop();
+            }  
+        </script>
+    </div>
+
+    <h3>Before Push</h3>
+    <div>
+        <button onclick="beforepush(event)">Hyd,Mum,Delhi,Che</button>
+        <p id="Ex6"></p>
+        <script>
+            let city=["Hyd","Mum","Delhi","Che"];
+            function beforepush(event) 
+            {
+                document.getElementById("Ex6").innerHTML
+                    = city;
+                
+            }
+        </script>
+    </div>
+
+    <h3>After Push</h3>
+    <div>
+        <button onclick="afterpush(event)">After Push</button>
+        <p id="Ex7"></p>
+        <script>
+            let city1=["Hyd","Mum","Delhi","Che"];
+            function afterpush(event) 
+            {
+               city1.push("INDIA");
+               city1[3] = " BHUTAN";
+               document.getElementById("Ex7").innerHTML
+                =  city1;
+            }
+      </script>
+    </div>
+
+    <h3>Before Shift</h3>
+    <div>
+        <button onclick="beforeshift(event)">Dog, Cat, Lion, Bear</button>
+        <p id="Ex8"></p>
+        <script>
+             let ani = ["Dog", "Cat", "Lion", "Bear"];
+            function beforeshift(event)
+            {
+               document.getElementById("Ex8").innerHTML
+                 =  ani;
+               
+            }
+       </script>
+    </div>
+
+    <h3>After Shift</h3>
+    <div>
+        <button onclick="aftershift(event)">After Shift</button>
+        <p id="Ex9"></p>
+        <script>
+            function aftershift(event)
+            {
+                ani.shift();
+                document.getElementById("Ex9").innerHTML
+                    = ani;
+            }
+        </script>
+    </div>
+
+    <h3>Before unshift</h3>
+    <div>
+        <button onclick="beforeunshift(event)">Geethika ,Reddy</button>
+        <p id="Ex10"></p>
+        <script>
+            let word = ["Geethika ","Reddy "];
+            function beforeunshift(event)
+            {
+               document.getElementById("Ex10").innerHTML
+                 = word;
+            }
+        </script>
+    </div>
+
+    <h3>After unshift</h3>
+    <div>
+        <button onclick="afterunshift(event)">After unshift</button>
+        <p id="Ex11"></p>
+        <script>
+            function afterunshift(event) 
+            {
+                word.unshift("Html");
+                word[3] = "Css";
+                word[4] = " Angular";
+                document.getElementById("Ex11").innerHTML= word;
+            }
+        </script>
+    </div>
+
+    <h3>Before Delete</h3>
+    <div>
+        <button onclick="beforedelete(event)">USA ,IND,AUS</button>
+        <p id="Ex12"></p>
+        <script>
+            let cou=["USA ","IND ","AUS"];
+            function beforedelete(event) 
+            {
+                document.getElementById("Ex12").innerHTML
+                = cou;
+            }
+        </script>
+    </div>
+
+    <h3>After delete</h3>
+    <div>
+        <button onclick="afterdelete(event)">After Delete</button>
+        <p id="Ex13"></p>
+        <script>
+            function afterdelete(event) 
+            {
+                delete cou[1];
+                document.getElementById("Ex13").innerHTML
+                    =  cou;
+            }
+ 
+        </script>
+    </div>
+
+    <h3>Array concat</h3>
+    <div>
+        <button onclick="usingconcat(event)">["HTML ","CSS "] ["JAVA ","JS"];</button>
+        <p id="Ex14"></p>
+        <script>
+            let words1=["HTML ","CSS "];
+            let words2=["JAVA ","JS"];
+            function usingconcat(event) 
+            {
+              total=words1.concat(words2);
+              document.getElementById("Ex14").innerHTML
+                =  total;
+            }
+        </script>
+    </div>
+
+    <h3>Array flat</h3>
+    <div>
+        <button onclick="usingflat(event)">[15,2],[3,46],[55,67]</button>
+        <p id="Ex15"></p>
+        <script>
+            let arr=[[15,2],[3,46],[55,67]];
+            
+            function usingflat(event) {
+                let result = arr.flat();
+                document.getElementById("Ex15").innerHTML
+                    =  result;
+            }
+       </script>
+    </div>
+
+    <h3>Array slice</h3>
+    <div>
+        <button onclick="usingslice(event)">gold,diamond,silver</button>
+        <p id="Ex16"></p>
+        <script>
+             let array=["gold","diamond","silver"];
+            function usingslice(event) 
+            {
+                let sol=array.slice(2);
+                document.getElementById("Ex16").innerHTML
+                    =  sol;
+            }
+ 
+        </script>
+    </div>
+ 
+</body>
+ 
+</html

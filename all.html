@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    
+<body>
+<h2>Using all types</h2>
+<p id="ex1"></p>
+<p id="ex2"></p>
+<p id="ex3"></p>
+<p id="ex4"></p>
+<p id="ex5"></p>
+<p id="ex6"></p>
+<p id="ex7"></p>
+<p id="ex8"></p>
+<p id="ex9"></p>
+<p id="ex10"></p>
+<script>
+   // jsvariables
+   var word="Ram";  //using var
+   {
+    var word="Ganesh";
+   }
+   document.getElementById("ex1").innerHTML
+        =word + "(using var keyword)";
+</script>
+<script>
+
+   let word1="Ram"; //using let
+   {
+    let word1="Ganesh";
+   }
+   document.getElementById("ex2").innerHTML
+        =word1 + "(using let keyword)";
+</script>
+<script>
+    //using operators
+    let a = 25;
+    let b = ++a;    //increment
+    document.getElementById("ex3").innerHTML = "ex3: " +b;
+</script>
+<script>
+    let num1 = 2982390839;
+    let num2 = 2172624487;
+    let result=num1>num2;
+    document.getElementById("ex4").innerHTML
+     ="ex4: " +result;
+</script>
+<script>
+    let numb= 3647;   //Mathpow represents as x**y
+    document.getElementById("ex5").innerHTML
+     = "ex5: "+Math.pow(numb,3);
+</script>
+<script>
+    let x = -100;      //left-shift assignment
+    x <<= 5;
+    document.getElementById("ex6").innerHTML 
+    = "ex6: "+ x;
+</script>
+<script>
+    let numb1 = 10;    //Booleans
+    let numb2 = 4;
+    let numb3 = 10;
+    document.getElementById("ex7").innerHTML = "ex7: "+
+    (numb1 == numb2) + "<br>" +  (numb1 == numb3);
+</script>
+<script>
+          //using typeof keyword 
+    document.getElementById("ex8").innerHTML = "ex8: "+
+    typeof "ram" + "<br>" + 
+    typeof "1234" + "<br>" +
+    typeof 12.36 + "<br>" +
+    typeof (0) + "<br>" +
+    typeof (263 + 4);
+</script>
+<script>
+    // object
+    const sente = 
+    {
+      firstword: "ABC",
+      secondword: "DEF",
+      thirdword: "GHI",
+    }
+    document.getElementById("ex9").innerHTML =
+   sente.firstword + " and " + sente.secondword + " and "+
+   sente.thirdword+".";
+</script>
+<script>
+        //functions
+    let z = operation(108, 37);
+    document.getElementById("ex10").innerHTML ="ex10: "+ z;
+    
+    function operation(a, b)
+     {
+       return a ** b;
+     }
+</script>
+    

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Sample Javascript Program</h2>
+<p id="sub"> </p>
+<p id="div"> </p>
+<p id="elem">Using the button type to change the subject.</p>
+<script>
+var x, y, z;      //Taking three variables  
+x = 5;           //Assigning x value
+y = 6;          // Assigning y value
+z = x/y;       //  div of x and y  
+ document.getElementById("sub").innerHTML = "Geethika" + " " + "Reddy.";
+ document.getElementById("div").innerHTML = "The value of z is " + z + ".";  
+
+</script>
+<script>
+    function myprogram() 
+    {
+      document.getElementById("elem").innerHTML = "HTML and CSS";
+    }
+    </script>
+   
+<button type="button" onclick="myprogram()">Output</button>
+<p> Addition of two numbers</p>
+<button type="button" onclick="document.write(x+y)">Result</button>
+<p> Multiplication of two numbers</p>
+<button type="button" onclick="document.write(x*y)">Result</button>
+<p> Difference of two numbers </p>
+<button type="button" onclick="document.write(x-y)">Result</button>
+</body>
+</html> 

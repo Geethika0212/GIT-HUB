@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>String Methods</h2>
+<h3>Examples for all String Methods</h3>
+<p id="Ex1"></p>
+<p id="Ex2"></p>
+<p id="Ex3"></p>
+<p id="Ex4">Using Replace:How are you</p>
+<button onclick="replace()">Click</button>
+<p id="Ex5"></p>
+<p id="Ex6">Uppercase:Geethika Reddy</p>
+<button onclick="upper()">Click</button>
+<p id="Ex7">Lowercase:GEETHIKA REDDY</p>
+<button onclick="lower()">Click</button>
+<p id="Ex8"></p>
+<p id="Ex9"></p>
+<p id="Ex10"></p>
+<p id="Ex11"></p>
+<p id="Ex12"></p>
+<p id="Ex13"></p>
+<p id="Ex14"></p>
+<p id="Ex15"></p>
+<p id="Ex16"></p>
+<script>
+    let string1= "Artha Solutions Hyd";
+    document.getElementById("Ex1").innerHTML = "The string length is : " +string1.length;
+</script>
+<script>
+    let text= "Geethika Reddy";
+    document.getElementById("Ex2").innerHTML = "Using text slice : "+ text.slice(0,5);
+</script>
+<script>
+    let substr = "Artha Solutions Hyd";
+    document.getElementById("Ex3").innerHTML = "Using Substring : "+ substr.substring(0,5);
+</script>
+<script>
+function replace() 
+{
+  let text = document.getElementById("Ex4").innerHTML; 
+  document.getElementById("Ex4").innerHTML =
+  text.replace(/How are you/,"Iam fine");
+}
+</script>
+<script>
+    let sentence="Sun rises in the West and sets in the west";
+    sentence=sentence.replaceAll("West","East");
+    document.getElementById("Ex5").innerHTML = "Using Replace all : "+ sentence;
+</script>
+<script>
+function upper()
+{
+    let word = document.getElementById("Ex6").innerHTML;
+    document.getElementById("Ex6").innerHTML = word.toUpperCase();
+}
+</script>
+<script>
+    function lower()
+    {
+        let word = document.getElementById("Ex7").innerHTML;
+        document.getElementById("Ex7").innerHTML = word.toLowerCase();
+    }
+    </script>
+<script>
+     let word1 = "Artha";
+     let word2 = "Solutions";
+     let word3 = word1.concat(" " + word2);
+     document.getElementById("Ex8").innerHTML = "Using Concat :" +word3;
+</script>
+<script>
+    let sent1 = "     Artha       Solutions    ";
+    let sent2 = sent1.trim();
+    document.getElementById("Ex9").innerHTML = "Before trim: " +sent1.length+"<br>After trim: "+sent2.length;
+</script>
+<script>
+    let sent3 = "            Artha       Solutions    ";
+    let sent4 = sent3.trimStart();
+    document.getElementById("Ex10").innerHTML = "Before trimstart: " +sent3.length+"<br>After trimstart: "+sent4.length;
+</script>
+<script>
+    let sent5 = "            Artha       Solutions    ";
+    let sent6 = sent5.trimEnd();
+    document.getElementById("Ex11").innerHTML = "Before trimend: " +sent5.length+"<br>After trimend: "+sent6.length;
+</script>
+<script>
+    let alpha="G";
+    alpha=alpha.padStart(6,"R");
+    document.getElementById("Ex12").innerHTML = "Using padstart: "+alpha;
+</script>
+<script>
+    let alpha1="G";
+    alpha1=alpha1.padEnd(6,"R");
+    document.getElementById("Ex13").innerHTML = "Using padend: "+alpha1;
+</script>
+<script>
+    let alpha2="Artha Solutions";
+    document.getElementById("Ex14").innerHTML = "Using charAt: "+alpha2.charAt(6);
+</script>
+<script>
+    let alpha3="Geethika Reddy";
+    document.getElementById("Ex15").innerHTML = "Using charCodeAt: "+alpha3.charCodeAt(12);
+</script>
+<script>
+    let alpha4="Apple,Banana,Carrot,Grapes,Papaya";
+    const split = alpha4.split(",");
+    document.getElementById("Ex16").innerHTML = "Using split: "+split[3];
+</script>
+</body>
+</html>

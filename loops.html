@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <style>
+        body{
+            color:rgba(48, 2, 2, 0.884)
+        }
+    </style>
+    <h3 style="color:rgb(11, 11, 95)">if-else statement:</h2>
+    <p id="ex1"></p>
+    <h3 style="color:rgb(11, 11, 95)">Switch Statement:</h3>
+    <p id="ex2"></p>
+    <h3 style="color:rgb(11, 11, 95)">For-loop:</h3>
+    <p id="ex3"></p>
+    <h3 style="color:rgb(11, 11, 95)">For-in loop:</h3>
+    <p id="ex4"></p>
+    <h3 style="color:rgb(11, 11, 95)">For-of loop:</h3>
+    <p id="ex5"></p>
+    <h3 style="color:rgb(11, 11, 95)">while loop:</h3>
+    <p id="ex6"></p>
+    <h3 style="color:rgb(11, 11, 95)">do-while loop:</h3>
+    <p id="ex7"></p>
+    <script>
+        let a="Dog";
+
+        if(a =="apple")
+        {
+            document.getElementById("ex1").innerHTML="It is a fruit";
+        }
+        else if(a == "brinjal")
+        {
+            document.getElementById("ex1").innerHTML="Not a fruit";
+        }
+        else {
+            document.getElementById("ex1").innerHTML="None of the above";
+        }
+    </script>
+    <script>
+        let number = 4;
+        let numbers
+        switch(number)
+        {
+            case 1:
+                numbers="1";
+                break;
+            case 2:
+                numbers="20";
+                break;
+            case 3:
+                numbers="30";
+                break;
+            case 4:
+                numbers="40";
+                break;
+            default:
+                numbers="Not in the loop";
+        } 
+        document.getElementById("ex2").innerHTML = numbers ;
+    </script>
+    <script>
+        const numb=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        let nums=" ";
+        for(let i=0;i<=numb.length;i++)
+        {
+            nums=nums+numb[i]+ "<br>";
+        }
+        document.getElementById("ex3").innerHTML=nums;
+    </script>
+    <script>
+        const alpha = {fname:"Geethika",lname:"Reddy",age:23};
+        
+        let text = "";
+        for (let x in alpha) {
+          text = text + alpha[x] + "<br>"; 
+        }
+        
+        document.getElementById("ex4").innerHTML = text;
+    </script>
+    <script>
+        const words=["Gold","silver","diamond","platinum"];
+        let text1="";
+        for(let x of words)
+        {
+            text1 = text1 + x +"<br>";
+        }
+        document.getElementById("ex5").innerHTML = text1;
+    </script>
+    <script>
+        const veg=["brinjal","carrot","capsicum","potato"];
+        let text2=" ";
+        let i=0;
+        while(veg[i])
+        
+        { 
+            text2=text2+veg[i]+"<br>";
+            i++;
+        }
+        document.getElementById("ex6").innerHTML = text2;
+    </script> 
+    
+<script>
+    let text3 = " ";
+    let c = 100;
+    
+    do {
+      text3 += "<br> " + c;
+      c++;
+    }
+    while (c <= 105);  
+    
+    document.getElementById("ex7").innerHTML = text3;
+    </script>

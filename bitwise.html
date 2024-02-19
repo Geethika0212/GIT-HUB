@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<style>
+    body {
+        
+        color: rgba(58, 3, 3, 0.884);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+</style>
+
+<h4 style="color:rgb(11, 11, 95)">Using type-of:</h4>
+<p id="ex1"></p>
+<h4 style="color:rgb(11, 11, 95)">Using break:</h4>
+<p id="ex2"></p>
+<h4 style="color:rgb(11, 11, 95)">Using Sets(add):</h4>
+<p id="ex3"></p>
+<h4 style="color:rgb(11, 11, 95)">Using Sets(delete):</h4>
+<p id="ex4"></p>
+<h4 style="color:rgb(11, 11, 95)">Using Maps:</h4>
+<p id="ex5"></p>
+<h4 style="color:rgb(11, 11, 95)">Using Bitwise:</h4>
+<p id="ex6"></p>
+<script>
+    //using typeof keyword 
+    document.getElementById("ex1").innerHTML = "ex1: " +
+        typeof "ram" + "<br>" +
+        typeof "1234" + "<br>" +
+        typeof 12.36 + "<br>" +
+        typeof (0) + "<br>" +
+        typeof (263 + 4);
+</script>
+<script>
+    let text = " ";
+    for (let i = 0; i <= 10; i++)
+     {
+        if (i === 6) 
+        {
+            break;
+        }
+        text = text + i + "<br>";
+    }
+    document.getElementById("ex2").innerHTML = text
+</script>
+
+<script>
+    const words = new Set(["Javascript", "HTML", "CSS"]);
+    let c = words.add("typescript");
+    let b = " ";
+    if (c.has("typescript")) {
+        b = "In the set";
+    }
+    else if (c.has("java")) {
+        b = "Not in the set";
+    }
+    else {
+        b = "NOA";
+    }
+    document.getElementById("ex3").innerHTML = b;
+</script>
+
+<script>
+    const word = new Set(["Javascript", "HTML", "HTML", "CSS", "CSS"]);
+    word.delete("CSS");
+    word.delete("Javascript");
+    document.getElementById("ex4").innerHTML = word.size;
+</script>
+
+<script>
+    const data = new Map([
+      ["Person1", 500],
+      ["Person2", 300],
+      ["Person3", 200]
+    ]);
+      data.set("person4", 600);
+      document.getElementById("ex5").innerHTML = data.get("person4");
+    </script>
+    
+    <label for="bitwiseOperators"> Bitwise Operator:</label>
+    <select id="bitwiseOperators" onchange="Bitwise()">
+        <option value="and">Bitwise AND (&)</option>
+        <option value="or">Bitwise OR (|)</option>
+        <option value="xor">Bitwise XOR (^)</option>
+        <option value="leftShift">Left Shift (<<)  </option>
+        <option value="rightShift">Right Shift (>>)</option>
+        <option value="unsignedRightShift">Unsigned Right Shift (>>>)</option>
+        <option value="bitwiseNot">Bitwise NOT (~)</option>
+    </select>
+ 
+    <script>
+ 
+        const value1 = 1; 
+        const value2 = 6; 
+ 
+        function Bitwise() 
+        {
+            const selectedOperator = event.target.value;
+ 
+            let sentence;
+            switch (selectedOperator) {
+                case "and":
+                    sentence = value1 & value2;
+                    break;
+                case "or":
+                    sentence = value1 | value2;
+                    break;
+                case "xor":
+                    sentence = value1 ^ value2;
+                    break;
+                case "leftShift":
+                    sentence = value1 << 1;
+                    break;
+                case "rightShift":
+                    sentence = value1 >> 1;
+                    break;
+                case "unsignedRightShift":
+                    sentence = value1 >>> 1;
+                    break;
+                case "bitwiseNot":
+                    sentence = ~value1;
+                    break;
+                default:
+                    sentence = "Invalid operator selected.";
+            }
+ 
+            document.getElementById("ex6").innerHTML = sentence;
+        }
+    </script>

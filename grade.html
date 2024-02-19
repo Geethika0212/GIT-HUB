@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>Marks</h2>
+    
+    <label for="marks">Enter Marks:</label>
+    <input type="number" id="marks" placeholder="Enter marks">
+
+    <button onclick="Grade()"> Grade</button>
+
+    <p id="ex1"></p>
+
+    <script>
+        function Grade() 
+        {
+            let marks = document.getElementById("marks").value;
+   
+            let grade;
+            if (marks >= 90)
+             {
+                grade = 'A';
+            } 
+            else if (marks >= 80) 
+            {
+                grade = 'B';
+            }
+             else if (marks >= 70) 
+            {
+                grade = 'C';
+            } 
+            else if (marks >= 60) 
+            {
+                grade = 'D';
+            } 
+            else {
+                grade = 'Fail';
+            }
+            document.getElementById("ex1").innerHTML="Your grade is: "+grade;
+        }
+    </script>
+
+</body>
+</html>
